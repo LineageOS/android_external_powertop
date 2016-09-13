@@ -173,7 +173,7 @@ void  do_cpufreq_stats(void)
 
 	topfreq = -1;
 
-	for (ret = 0 ; ret<=maxfreq; ret++) {
+	for (ret = 0 ; ret<=maxfreq && ret<=254; ret++) {
 	uint64_t last_freq = -1;
 	strlcpy(cpufreqstrings[ret+1], " ",sizeof(cpufreqstrings[ret+1]));
 		for ( cpucount = 0; cpucount <= cpu; cpucount++) {
